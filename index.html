@@ -1,0 +1,39 @@
+# For-rue-on-Valentines-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Rue 💖</title>
+    <style>
+        body { text-align: center; font-family: 'Arial', sans-serif; background-color: #ffe6e6; padding-top: 100px; overflow: hidden; }
+        h1 { color: #d63384; margin-bottom: 30px; }
+        .buttons { display: flex; justify-content: center; gap: 20px; position: relative; height: 300px; }
+        button { padding: 15px 30px; font-size: 1.2rem; cursor: pointer; border-radius: 10px; border: none; transition: 0.3s; height: 60px; }
+        #yesBtn { background-color: #ff4d6d; color: white; z-index: 10; }
+        #noBtn { background-color: #6c757d; color: white; position: absolute; transition: 0.2s; }
+    </style>
+</head>
+<body>
+
+    <h1>Rue, will you be my Valentine? 💖</h1>
+    <div class="buttons">
+        <button id="yesBtn" onclick="celebrate()">Yes</button>
+        <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            const btn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+        function celebrate() {
+            document.body.innerHTML = "<h1>Yay! See you on Valentine's Day! 🥰🌹</h1>";
+            document.body.style.backgroundColor = "#ffb3c1";
+        }
+    </script>
+</body>
+</html>
